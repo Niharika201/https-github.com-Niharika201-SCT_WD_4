@@ -1,32 +1,107 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.container {
-  width: 400px;
-}
-
-form input, form button {
-  padding: 10px;
-  margin: 5px 0;
-  width: 100%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background-color: #1e1e1e;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #0f0f0f;
+    color: #ffffff;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00f7ff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #00f7ff;
+  }
+  
+  #navbar.scrolled {
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Sections */
+  section {
+    padding: 120px 40px 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+  }
+  
+  .content {
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: #111;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      display: none;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
